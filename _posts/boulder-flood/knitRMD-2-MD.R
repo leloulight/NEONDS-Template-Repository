@@ -66,7 +66,7 @@ for (files in rmd.files) {
   
   #setup path to images
   #print(paste0(imagePath, sub(".Rmd$", "", basename(input)), "/"))
-  fig.path <- print(paste0(imagePath, sub(".Rmd$", "", input), "/"))
+  fig.path <- paste0(imagePath, sub(".Rmd$", "", input),"/")
   
   
   opts_chunk$set(fig.path = fig.path)
@@ -92,7 +92,7 @@ for (files in rmd.files) {
   
   ## OUTPUT STUFF TO R ##
   #output code in R format
-  rCodeOutput <- paste0(gitRepoPath,postsDir, sub(".Rmd$", "", basename(files)), ".R")
+  rCodeOutput <- paste0(gitRepoPath,postsDir,"/", sub(".Rmd$", "", basename(files)), ".R")
   
   #purl the code to R
   purl(files, output = rCodeOutput)

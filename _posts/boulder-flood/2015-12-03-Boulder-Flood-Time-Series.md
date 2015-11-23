@@ -1,9 +1,27 @@
 ---
-title: "Boulder-Flood"
-output: html_document
+layout: post
+title: "Exploring Flood Events Using Data - The Boulder Flood"
+date:  2015-05-18
+authors: [Leah A. Wasser]
+dateCreated:  2015-05-18
+lastModified: 2015-05-18
+categories: [Coding and Informatics]
+category: coding-and-informatics
+tags: [R,time-series]
+mainTag:
+scienceThemes: [phenology, disturbance]
+description: "About description here."
+code1:
+image:
+  feature: TeachingModules.jpg
+  credit: A National Ecological Observatory Network (NEON) - Teaching Module
+  creditlink: http://www.neoninc.org
+permalink: /R/Boulder-Flood-Data/
+code1: Boulder-Flood-Data.R
+comments: false
 ---
 
-
+Intro will go here.
 
 
     library(lubridate)
@@ -97,7 +115,7 @@ Great - let's plot the data. We can use GGPLOT to plot.
     ggplot(boulderStrDis.2013, aes(datetime, disValue)) +
       geom_point()
 
-![ ]({{ site.baseurl }}/images/rfigs/2015-11-20-Boulder-Flood-Time-Series2/unnamed-chunk-2-1.png) 
+![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/plot-flood-data-1.png) 
 
 
 We can plot a subset of our data too. Let's specify the months directly around
@@ -127,7 +145,7 @@ creating ...
               xlab("Time") + ylab("Stream Discharge CFS") +
               ggtitle("Stream Discharge - Station\n Boulder Creek 2013")
 
-![ ]({{ site.baseurl }}/images/rfigs/2015-11-20-Boulder-Flood-Time-Series2/plot-subset-1.png) 
+![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/plot-subset-1.png) 
 
 #Publish to Plot.ly
 
@@ -162,7 +180,7 @@ creating ...
 
     ## Warning: Removed 4 rows containing missing values (geom_point).
 
-![ ]({{ site.baseurl }}/images/rfigs/2015-11-20-Boulder-Flood-Time-Series2/import-precip-1.png) 
+![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/import-precip-1.png) 
 
 
 
@@ -187,5 +205,5 @@ creating ...
 
     ## Warning: Removed 4 rows containing missing values (geom_point).
 
-![ ]({{ site.baseurl }}/images/rfigs/2015-11-20-Boulder-Flood-Time-Series2/daily-summaries-1.png) 
+![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/daily-summaries-1.png) 
 

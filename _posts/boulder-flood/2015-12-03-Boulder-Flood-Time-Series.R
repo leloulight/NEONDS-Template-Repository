@@ -1,4 +1,4 @@
-## ------------------------------------------------------------------------
+## ----load-libraries------------------------------------------------------
 library(lubridate)
 library(ggplot2)
 
@@ -53,7 +53,7 @@ str(boulderStrDis.2013)
 sum(is.na(boulderStrDis.2013$datetime ))
 
 
-## ------------------------------------------------------------------------
+## ----plot-flood-data-----------------------------------------------------
 
 ggplot(boulderStrDis.2013, aes(datetime, disValue)) +
   geom_point()

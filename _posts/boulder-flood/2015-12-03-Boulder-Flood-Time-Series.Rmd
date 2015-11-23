@@ -1,9 +1,37 @@
-## ------------------------------------------------------------------------
+---
+layout: post
+title: "Exploring Flood Events Using Data - The Boulder Flood"
+date:   2015-05-18 20:49:52
+authors: Leah A. Wasser
+dateCreated:  2015-05-18 20:49:52
+lastModified: 2015-05-18 20:49:52
+categories: [Coding and Informatics]
+category: coding-and-informatics
+tags: [R,Time-Series]
+mainTag: GIS-Spatial-Data
+scienceThemes:[phenology,disturbance]
+description: "About...."
+code1: 
+image:
+  feature: TeachingModules.jpg
+  credit: A National Ecological Observatory Network (NEON) - Teaching Module
+  creditlink: http://www.neoninc.org
+permalink: /R/Boulder-Flood-Data/
+code1: Boulder-Flood-Data.R
+comments: false
+---
+
+Intro will go here...
+
+```{r load-libraries}
 library(lubridate)
 library(ggplot2)
 
+```
 
-## ----import-discharge, echo=FALSE----------------------------------------
+Open the data.
+
+```{r import-discharge, echo=FALSE}
 #SOURCe
 #http://nwis.waterdata.usgs.gov/co/nwis/uv/?cb_00065=on&cb_00060=on&format=rdb&site_no=06730200&period=&begin_date=2013-01-01&end_date=2013-12-31
 #import data
@@ -27,8 +55,14 @@ names(boulderStrDis.2013)[5] <- "disValue"
 
 #view names
 names(boulderStrDis.2013)
+```
 
-## ----adjust-data-structure-----------------------------------------------
+Let's have a look at the structure of our data. It appears as if the discharge 
+value is a character class. This is likely because we had an additional row in our
+data. Let's convert the discharge column to a numeric class. It appears as if 
+`integer` will work given there are no decimal places in our data.
+
+```{r adjust-data-structure }
 #view structure of data
 str(boulderStrDis.2013)
 
@@ -38,8 +72,14 @@ boulderStrDis.2013$disValue <- as.integer(boulderStrDis.2013$disValue)
 class(boulderStrDis.2013$disValue)
 str(boulderStrDis.2013)
 
+```
 
-## ----convert-time--------------------------------------------------------
+#Converting Time Stamps
+We have converted our discharge data to an integer format. However the time stamp
+is still a character class. Let's convert it to a time class for efficient plotting,
+next.
+
+```{r convert-time }
 #view class
 class(boulderStrDis.2013$datetime)
 
@@ -52,14 +92,23 @@ str(boulderStrDis.2013)
 #make sure there are no null values in our datetime field
 sum(is.na(boulderStrDis.2013$datetime ))
 
+```
 
-## ------------------------------------------------------------------------
+
+Great - let's plot the data. We can use GGPLOT to plot.
+
+```{r plot-flood-data }
 
 ggplot(boulderStrDis.2013, aes(datetime, disValue)) +
   geom_point()
 
+```
 
-## ----define-time-subset--------------------------------------------------
+
+We can plot a subset of our data too. Let's specify the months directly around
+the boulder flood - so August - October 2013.
+
+```{r define-time-subset }
 
 #just subset the plot to the month of Aug15-oct15
 startTime <- as.POSIXct("2013-08-15 00:00:00")
@@ -67,8 +116,14 @@ endTime <- as.POSIXct("2013-10-15 00:00:00")
 
 limits <- c(startTime,endTime)
 
+```
 
-## ----plot-subset---------------------------------------------------------
+#GGPLOT - 
+
+One nice way to keep track of featured added to your plot in ggplot, is by first 
+creating ... 
+
+```{r plot-subset }
 #plot the data - September-October
 disPlot <- ggplot(data=boulderStrDis.2013,
        aes(datetime,disValue)) +
@@ -81,13 +136,19 @@ disPlot + theme(axis.title.x = element_blank()) +
           ggtitle("Stream Discharge - Station\n Boulder Creek 2013")
 
 
+```
 
-## ----plot.ly-------------------------------------------------------------
+#Publish to Plot.ly
+
+```{r plot.ly }
 
 #code here
 
+```
 
-## ----import-precip-------------------------------------------------------
+#Explore Precipitation During the Flood
+
+```{r import-precip }
 
 precip.boulder <- read.csv("precip-discharge/2013-precip-data-640457.csv",
                            stringsAsFactors = FALSE)
@@ -112,8 +173,10 @@ precPlot + theme(axis.title.x = element_blank()) +
           xlab("Time") + ylab("Precipitation (100th of an inch)") +
           ggtitle("Hourly Precipitation - Boulder - Station\n Boulder Creek 2013")
 
+```
 
-## ----daily-summaries-----------------------------------------------------
+
+```{r daily-summaries }
 
 library(plyr)
 #add a day column in the data frame
@@ -134,4 +197,5 @@ precPlot + theme(axis.title.x = element_blank()) +
           xlab("Time") + ylab("Precipitation (100th of an inch)") +
           ggtitle("DAILY Precipitation - Boulder- Station\n Boulder Creek 2013")
 
+```
 
