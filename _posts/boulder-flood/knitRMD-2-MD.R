@@ -86,7 +86,7 @@ for (files in rmd.files) {
   file.copy(paste0(wd,"/",fig.path), paste0(gitRepoPath,imagePath), recursive=TRUE)
   
   #copy rmd file to the rmd directory on git
-  file.copy(paste0(wd,postsDir,"/",basename(files)), gitRepoPath, recursive=TRUE)
+  file.copy(paste0(wd,"/",basename(files)), paste0(gitRepoPath,postsDir), recursive=TRUE)
   
   #delete local repo copies of RMD files just so things are cleaned up??
   

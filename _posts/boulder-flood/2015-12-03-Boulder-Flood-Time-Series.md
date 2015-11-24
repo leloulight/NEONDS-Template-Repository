@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Exploring Flood Events Using Data - The Boulder Flood"
-date:  2015-05-18
-authors: [Leah A. Wasser]
+title: "Exploring Precipitation & Stream Discharge Data to Better Understand - The 2013 Colorado Floods"
+date: 2015-05-18
+authors: Leah A. Wasser
 dateCreated:  2015-05-18
 lastModified: 2015-05-18
 categories: [Coding and Informatics]
 category: coding-and-informatics
-tags: [R,time-series]
-mainTag:
+tags: [R, time-series]
+mainTag: GIS-Spatial-Data
 scienceThemes: [phenology, disturbance]
-description: "About description here."
-code1:
+description: "About the boulder flood."
+code1: 
 image:
   feature: TeachingModules.jpg
   credit: A National Ecological Observatory Network (NEON) - Teaching Module
@@ -21,7 +21,9 @@ code1: Boulder-Flood-Data.R
 comments: false
 ---
 
-Intro will go here.
+{% include _toc.html %}
+
+Intro will go here...
 
 
     library(lubridate)
@@ -168,8 +170,8 @@ creating ...
     
     #plot the data - September-October
     precPlot <- ggplot(data=precip.boulder,
-           aes(DATE,HPCP)) +
-          geom_point() +
+          aes(DATE,HPCP)) +
+          geom_bar(stat="identity") +
           scale_x_datetime(limits=limits) +
           scale_y_continuous(limits = c(0, 300))
           
@@ -178,7 +180,7 @@ creating ...
               xlab("Time") + ylab("Precipitation (100th of an inch)") +
               ggtitle("Hourly Precipitation - Boulder - Station\n Boulder Creek 2013")
 
-    ## Warning: Removed 4 rows containing missing values (geom_point).
+    ## Warning: Removed 4 rows containing missing values (position_stack).
 
 ![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/import-precip-1.png) 
 
@@ -188,13 +190,25 @@ creating ...
     #add a day column in the data frame
     precip.boulder$daily <- floor_date(precip.boulder$DATE, "day")
     
+    #summarize by day
     dailyPrecip.boulder <- ddply(precip.boulder, "daily",summarise, x=sum(HPCP))
     
+    names(dailyPrecip.boulder)
+
+    ## [1] "daily" "x"
+
+    #let's create a more meaningful column header for the precip value
+    names(dailyPrecip.boulder) <- c("day","prec_100In")
     
+    # view names
+    names(dailyPrecip.boulder)
+
+    ## [1] "day"        "prec_100In"
+
     #plot the data - September-October
     precPlot <- ggplot(data=dailyPrecip.boulder,
-          aes(daily,x)) +
-          geom_point() +
+          aes(day,prec_100In)) +
+           geom_bar(stat="identity") +
           scale_x_datetime(limits=limits) +
           scale_y_continuous(limits = c(0, 800))
           
@@ -203,7 +217,43 @@ creating ...
               xlab("Time") + ylab("Precipitation (100th of an inch)") +
               ggtitle("DAILY Precipitation - Boulder- Station\n Boulder Creek 2013")
 
-    ## Warning: Removed 4 rows containing missing values (geom_point).
+    ## Warning: Removed 4 rows containing missing values (position_stack).
 
 ![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/daily-summaries-1.png) 
+
+## Units
+
+It looks like our precipitation data are in 100th of an inch. Let's convert the 
+data to inches - units that we might be a bit more accustomed to. And then let's
+plot the data as a bar plot rather than a scatter plot.
+
+
+    #convert to inches
+    dailyPrecip.boulder$prec_in <- dailyPrecip.boulder$prec_100In / 100
+    
+    head(dailyPrecip.boulder)
+
+    ##          day prec_100In prec_in
+    ## 1 2013-01-01          0     0.0
+    ## 2 2013-01-28         10     0.1
+    ## 3 2013-01-29         10     0.1
+    ## 4 2013-02-01          0     0.0
+    ## 5 2013-02-14         10     0.1
+    ## 6 2013-02-20         20     0.2
+
+    #plot the data - September-October
+    precPlot <- ggplot(data=dailyPrecip.boulder,
+          aes(day,prec_in)) +
+          geom_bar(stat="identity") +
+          scale_x_datetime(limits=limits) +
+          scale_y_continuous(limits = c(0, 8))
+          
+    #add title and labels
+    precPlot + theme(axis.title.x = element_blank()) +
+              xlab("Time") + ylab("Precipitation (inches)") +
+              ggtitle("Daily Total Precipitation (Inches) - Boulder- Station\n Boulder Creek 2013")
+
+    ## Warning: Removed 4 rows containing missing values (position_stack).
+
+![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/convert-units-1.png) 
 

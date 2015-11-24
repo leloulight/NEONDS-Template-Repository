@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Exploring Flood Events Using Data - The Boulder Flood"
-date:   2015-05-18 20:49:52
+title: "Exploring Precipitation & Stream Discharge Data to Better Understand - The 2013 Colorado Floods"
+date: 2015-05-18
 authors: Leah A. Wasser
-dateCreated:  2015-05-18 20:49:52
-lastModified: 2015-05-18 20:49:52
+dateCreated:  2015-05-18
+lastModified: 2015-05-18
 categories: [Coding and Informatics]
 category: coding-and-informatics
-tags: [R,Time-Series]
+tags: [R, time-series]
 mainTag: GIS-Spatial-Data
-scienceThemes:[phenology,disturbance]
-description: "About...."
+scienceThemes: [phenology, disturbance]
+description: "About the boulder flood."
 code1: 
 image:
   feature: TeachingModules.jpg
@@ -20,6 +20,8 @@ permalink: /R/Boulder-Flood-Data/
 code1: Boulder-Flood-Data.R
 comments: false
 ---
+
+{% include _toc.html %}
 
 Intro will go here...
 
@@ -163,8 +165,8 @@ precip.boulder$HPCP[precip.boulder$HPCP==99999] <- NA
 
 #plot the data - September-October
 precPlot <- ggplot(data=precip.boulder,
-       aes(DATE,HPCP)) +
-      geom_point() +
+      aes(DATE,HPCP)) +
+      geom_bar(stat="identity") +
       scale_x_datetime(limits=limits) +
       scale_y_continuous(limits = c(0, 300))
       
@@ -182,13 +184,21 @@ library(plyr)
 #add a day column in the data frame
 precip.boulder$daily <- floor_date(precip.boulder$DATE, "day")
 
+#summarize by day
 dailyPrecip.boulder <- ddply(precip.boulder, "daily",summarise, x=sum(HPCP))
 
+names(dailyPrecip.boulder)
+
+#let's create a more meaningful column header for the precip value
+names(dailyPrecip.boulder) <- c("day","prec_100In")
+
+# view names
+names(dailyPrecip.boulder)
 
 #plot the data - September-October
 precPlot <- ggplot(data=dailyPrecip.boulder,
-      aes(daily,x)) +
-      geom_point() +
+      aes(day,prec_100In)) +
+       geom_bar(stat="identity") +
       scale_x_datetime(limits=limits) +
       scale_y_continuous(limits = c(0, 800))
       
@@ -196,6 +206,37 @@ precPlot <- ggplot(data=dailyPrecip.boulder,
 precPlot + theme(axis.title.x = element_blank()) +
           xlab("Time") + ylab("Precipitation (100th of an inch)") +
           ggtitle("DAILY Precipitation - Boulder- Station\n Boulder Creek 2013")
+
+
+```
+
+## Units
+
+It looks like our precipitation data are in 100th of an inch. Let's convert the 
+data to inches - units that we might be a bit more accustomed to. And then let's
+plot the data as a bar plot rather than a scatter plot.
+
+```{r convert-units }
+
+
+#convert to inches
+dailyPrecip.boulder$prec_in <- dailyPrecip.boulder$prec_100In / 100
+
+head(dailyPrecip.boulder)
+
+
+#plot the data - September-October
+precPlot <- ggplot(data=dailyPrecip.boulder,
+      aes(day,prec_in)) +
+      geom_bar(stat="identity") +
+      scale_x_datetime(limits=limits) +
+      scale_y_continuous(limits = c(0, 8))
+      
+#add title and labels
+precPlot + theme(axis.title.x = element_blank()) +
+          xlab("Time") + ylab("Precipitation (inches)") +
+          ggtitle("Daily Total Precipitation (Inches) - Boulder- Station\n Boulder Creek 2013")
+
 
 ```
 

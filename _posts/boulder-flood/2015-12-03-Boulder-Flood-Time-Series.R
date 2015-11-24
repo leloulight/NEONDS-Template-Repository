@@ -102,8 +102,8 @@ precip.boulder$HPCP[precip.boulder$HPCP==99999] <- NA
 
 #plot the data - September-October
 precPlot <- ggplot(data=precip.boulder,
-       aes(DATE,HPCP)) +
-      geom_point() +
+      aes(DATE,HPCP)) +
+      geom_bar(stat="identity") +
       scale_x_datetime(limits=limits) +
       scale_y_continuous(limits = c(0, 300))
       
@@ -119,13 +119,21 @@ library(plyr)
 #add a day column in the data frame
 precip.boulder$daily <- floor_date(precip.boulder$DATE, "day")
 
+#summarize by day
 dailyPrecip.boulder <- ddply(precip.boulder, "daily",summarise, x=sum(HPCP))
 
+names(dailyPrecip.boulder)
+
+#let's create a more meaningful column header for the precip value
+names(dailyPrecip.boulder) <- c("day","prec_100In")
+
+# view names
+names(dailyPrecip.boulder)
 
 #plot the data - September-October
 precPlot <- ggplot(data=dailyPrecip.boulder,
-      aes(daily,x)) +
-      geom_point() +
+      aes(day,prec_100In)) +
+       geom_bar(stat="identity") +
       scale_x_datetime(limits=limits) +
       scale_y_continuous(limits = c(0, 800))
       
@@ -133,5 +141,29 @@ precPlot <- ggplot(data=dailyPrecip.boulder,
 precPlot + theme(axis.title.x = element_blank()) +
           xlab("Time") + ylab("Precipitation (100th of an inch)") +
           ggtitle("DAILY Precipitation - Boulder- Station\n Boulder Creek 2013")
+
+
+
+## ----convert-units-------------------------------------------------------
+
+
+#convert to inches
+dailyPrecip.boulder$prec_in <- dailyPrecip.boulder$prec_100In / 100
+
+head(dailyPrecip.boulder)
+
+
+#plot the data - September-October
+precPlot <- ggplot(data=dailyPrecip.boulder,
+      aes(day,prec_in)) +
+      geom_bar(stat="identity") +
+      scale_x_datetime(limits=limits) +
+      scale_y_continuous(limits = c(0, 8))
+      
+#add title and labels
+precPlot + theme(axis.title.x = element_blank()) +
+          xlab("Time") + ylab("Precipitation (inches)") +
+          ggtitle("Daily Total Precipitation (Inches) - Boulder- Station\n Boulder Creek 2013")
+
 
 
