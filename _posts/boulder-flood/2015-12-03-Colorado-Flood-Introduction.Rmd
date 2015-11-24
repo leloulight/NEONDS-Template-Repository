@@ -28,6 +28,8 @@ with a warm humid front. The clash between the cold and warm fronts yielded
 heavy rain & devastating flooding in colorado.
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XwbdAJGvj_o" frameborder="0" allowfullscreen></iframe>
+
 **images of the event here**
 
 
