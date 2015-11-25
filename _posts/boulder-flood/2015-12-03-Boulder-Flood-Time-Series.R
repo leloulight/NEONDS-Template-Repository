@@ -82,9 +82,30 @@ disPlot + theme(axis.title.x = element_blank()) +
 
 
 
-## ----plot.ly-------------------------------------------------------------
+## ----plotly-discharge-data-----------------------------------------------
+library(plotly)
 
-#code here
+#subset out some of the data - July-November
+boulderStrDis.aug.oct2013 <- subset(boulderStrDis.2013, 
+                        datetime >= as.POSIXct('2013-08-15 00:00',
+                        tz = "America/New_York") & datetime <=
+        as.POSIXct('2013-10-15 23:59', tz = "America/Denver"))
+
+#plot the data - September-October
+disPlot.plotly <- ggplot(data=boulderStrDis.aug.oct2013,
+        aes(datetime,disValue)) +
+        geom_point(size=3) 
+      
+#add title and labels
+disPlot.plotly <- disPlot.plotly + theme(axis.title.x = element_blank()) +
+          xlab("Time") + ylab("Stream Discharge CFS") +
+          ggtitle("Stream Discharge - Boulder Creek 2013")
+
+#view plotly plot in R
+ggplotly()
+
+#publish plotly plot to your plot.ly online account when you are happy with it
+plotly_POST(disPlot.plotly)
 
 
 ## ----import-precip-------------------------------------------------------
@@ -130,8 +151,14 @@ names(dailyPrecip.boulder) <- c("day","prec_100In")
 # view names
 names(dailyPrecip.boulder)
 
+#are there no data values?
+sum(is.na(dailyPrecip.boulder))
+
+#remove rows with no data
+dailyPrecip.boulder.cln <- na.omit(dailyPrecip.boulder)
+
 #plot the data - September-October
-precPlot <- ggplot(data=dailyPrecip.boulder,
+precPlot <- ggplot(data=dailyPrecip.boulder.cln,
       aes(day,prec_100In)) +
        geom_bar(stat="identity") +
       scale_x_datetime(limits=limits) +
@@ -148,22 +175,65 @@ precPlot + theme(axis.title.x = element_blank()) +
 
 
 #convert to inches
-dailyPrecip.boulder$prec_in <- dailyPrecip.boulder$prec_100In / 100
+dailyPrecip.boulder.cln$prec_in <- dailyPrecip.boulder.cln$prec_100In / 100
 
-head(dailyPrecip.boulder)
-
+head(dailyPrecip.boulder.cln)
 
 #plot the data - September-October
-precPlot <- ggplot(data=dailyPrecip.boulder,
+precPlot_2013 <- ggplot(data=dailyPrecip.boulder.cln,
+      aes(day,prec_in)) +
+      geom_bar(stat="identity") +
+      scale_x_datetime() +
+      scale_y_continuous(limits = c(0, 8))
+      
+#add title and labels
+precPlot_2013 <- precPlot_2013 + theme(axis.title.x = element_blank()) +
+          xlab("2013") + ylab("Precipitation (Inches)") +
+          ggtitle("Daily Total Precipitation (Inches) - Boulder- Station\n Boulder Creek 2013")
+
+
+precPlot_2013
+
+#plot the data - September-October
+precPlot <- ggplot(data=dailyPrecip.boulder.cln,
       aes(day,prec_in)) +
       geom_bar(stat="identity") +
       scale_x_datetime(limits=limits) +
       scale_y_continuous(limits = c(0, 8))
       
 #add title and labels
-precPlot + theme(axis.title.x = element_blank()) +
+precPlot <- precPlot + theme(axis.title.x = element_blank()) +
           xlab("Time") + ylab("Precipitation (inches)") +
           ggtitle("Daily Total Precipitation (Inches) - Boulder- Station\n Boulder Creek 2013")
+
+
+precPlot
+
+## ----plotly-precip-data--------------------------------------------------
+
+library(plotly)
+#setup your plot.ly credentials
+Sys.setenv("plotly_username"="your.user.name.here")
+Sys.setenv("plotly_api_key"="your.key.here")
+
+#subset out some of the data - July-November
+dailyPrec.sub <- subset(dailyPrecip.boulder.cln, 
+                        day >= as.POSIXct('2013-08-15 00:00',
+                        tz = "America/New_York") & day <=
+        as.POSIXct('2013-10-15 23:59', tz = "America/Denver"))
+
+
+#create new plot
+new <- ggplot(data=dailyPrec.sub, aes(day,prec_in)) +
+  geom_bar(stat="identity") +
+  xlab("Time") + ylab("Precipitation (inches)") +
+  ggtitle("Daily Total Precipitation (Inches) - Boulder Creek 2013") 
+
+#view plotly plot in R
+ggplotly()
+
+#publish plotly plot to your plot.ly online account when you are happy with it
+plotly_POST(new)
 
 
 

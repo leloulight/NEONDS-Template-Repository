@@ -4,7 +4,7 @@ title: "Understanding the 2013 Colorado Floods - #WorkWithData"
 date:  2015-11-23
 authors: [Leah A. Wasser]
 dateCreated:  2015-05-18
-lastModified: 2015-11-24
+lastModified: 2015-11-25
 categories: [Coding and Informatics]
 category: coding-and-informatics
 tags: [R, time-series]
@@ -58,10 +58,39 @@ The map below shows
 
 **plots of precip and discharge here**
 
-![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/plot-flood-data-1.png) 
-
-
 
 ###Hourly Precipitation
+
 ![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/daily-summaries-1.png) 
+
+Below is a plot of hourly precipitation between August 15 - October 15 2015. Explore
+the data and answer the following questions
+
+1. What dates were the highest precipitation values observed? What was the total 
+precipitation on these days? What units is that value in?
+
+2. 
+
+
+<div>
+    <a href="https://plot.ly/~leahawasser/116/" target="_blank" title="Daily Total Precipitation (Inches) - Boulder Creek 2013" style="display: block; text-align: center;"><img src="https://plot.ly/~leahawasser/116.png" alt="Daily Total Precipitation (Inches) - Boulder Creek 2013" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="leahawasser:116"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+
+
+#Stream Discharge data
+
+**some background on stream discharge will go here..**
+
+Below, have a look at a static plot that shows stream discharge in Boulder Creek
+for 2013. What do you notice about the patterns of discharge seen in these data?
+
+![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/plot-flood-data-1.png) 
+
+<div>
+    <a href="https://plot.ly/~leahawasser/140/" target="_blank" title="Stream Discharge - Boulder Creek 2013" style="display: block; text-align: center;"><img src="https://plot.ly/~leahawasser/140.png" alt="Stream Discharge - Boulder Creek 2013" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="leahawasser:140"  src="https://plot.ly/embed.js" async></script>
+</div>
+
 
