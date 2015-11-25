@@ -58,6 +58,16 @@ The map below shows
 
 **plots of precip and discharge here**
 
+#Drought and Rain
+Get Palmer data
+
+<div>
+    <a href="https://plot.ly/~leahawasser/145/" target="_blank" title="Palmer Drought Severity Index - Colorado" style="display: block; text-align: center;"><img src="https://plot.ly/~leahawasser/145.png" alt="Palmer Drought Severity Index - Colorado" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="leahawasser:145"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+
+#http://www7.ncdc.noaa.gov/CDO/CDODivisionalSelect.jsp#
 
 #The Impact of Rainfall
 

@@ -32,6 +32,73 @@ library(ggplot2)
 
 ```
 
+#Drouhg Data - the Palmer Drought Index
+
+01 - Ar Drainage Baisin
+02 - CO Drainage Basin
+03 - KS Drainage Basin
+04- Platte Drainage
+05 Rio Grand
+Stuff about the index will go here
+
+```{r drought-data }
+#Import State Wide index data
+drought <- read.csv("drought/CDODiv8721376888863_CO.txt", header = TRUE)
+head(drought)
+
+#convert date field (YearMonth) to date class
+drought$YearMonth <- paste0(substr(drought$YearMonth,0,4),"-",substr(drought$YearMonth,5,6),"-01")
+
+#convert to date
+drought$YearMonth <- as.Date(drought$YearMonth, format="%Y-%m-%d")
+
+#remove NA values (-9999 and -99.99)
+drought <- drought[!drought$PDSI==-99.99,]
+
+#plot Palmer Drought Index
+palmer.drought <- ggplot(data=drought,
+       aes(YearMonth,PDSI)) +
+       geom_bar(stat="identity",position = "identity") +
+       xlab("Year / Month") + ylab("Palmer Drought Severity Index") +
+       ggtitle("Palmer Drought Severity Index - Colorado")
+
+palmer.drought  
+
+```
+
+
+Upload to Plot.ly
+```{r plotly-drought }
+
+library(plotly)
+
+#subset out some of the data - July-November
+drought2005.2015 <- subset(drought, 
+                        YearMonth >= as.Date('2005-01-01', tz = "America/Denver") &
+                        YearMonth <= as.Date('2015-11-01', tz = "America/Denver"))
+
+#plot the data - September-October
+droughtPlot.plotly <- ggplot(data=drought2005.2015,
+        aes(YearMonth,PDSI)) +
+         geom_bar(stat="identity",position = "identity") +
+       xlab("Year / Month") + ylab("Palmer Drought Severity Index") +
+       ggtitle("Palmer Drought Severity Index - Colorado")
+      
+
+#view plotly plot in R
+ggplotly()
+
+#publish plotly plot to your plot.ly online account when you are happy with it
+plotly_POST(droughtPlot.plotly)
+
+```
+
+
+http://www1.ncdc.noaa.gov/pub/orders/CDODiv5787606888799.txt
+
+drought <- read.
+
+
 Open the data.
 
 ```{r import-discharge, echo=FALSE}

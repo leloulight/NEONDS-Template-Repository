@@ -3,6 +3,54 @@ library(lubridate)
 library(ggplot2)
 
 
+## ----drought-data--------------------------------------------------------
+#Import State Wide index data
+drought <- read.csv("drought/CDODiv8721376888863_CO.txt", header = TRUE)
+head(drought)
+
+#convert date field (YearMonth) to date class
+drought$YearMonth <- paste0(substr(drought$YearMonth,0,4),"-",substr(drought$YearMonth,5,6),"-01")
+
+#convert to date
+drought$YearMonth <- as.Date(drought$YearMonth, format="%Y-%m-%d")
+
+#remove NA values (-9999 and -99.99)
+drought <- drought[!drought$PDSI==-99.99,]
+
+#plot Palmer Drought Index
+palmer.drought <- ggplot(data=drought,
+       aes(YearMonth,PDSI)) +
+       geom_bar(stat="identity",position = "identity") +
+       xlab("Year / Month") + ylab("Palmer Drought Severity Index") +
+       ggtitle("Palmer Drought Severity Index - Colorado")
+
+palmer.drought  
+
+
+## ----plotly-drought------------------------------------------------------
+
+library(plotly)
+
+#subset out some of the data - July-November
+drought2005.2015 <- subset(drought, 
+                        YearMonth >= as.Date('2005-01-01', tz = "America/Denver") &
+                        YearMonth <= as.Date('2015-11-01', tz = "America/Denver"))
+
+#plot the data - September-October
+droughtPlot.plotly <- ggplot(data=drought2005.2015,
+        aes(YearMonth,PDSI)) +
+         geom_bar(stat="identity",position = "identity") +
+       xlab("Year / Month") + ylab("Palmer Drought Severity Index") +
+       ggtitle("Palmer Drought Severity Index - Colorado")
+      
+
+#view plotly plot in R
+ggplotly()
+
+#publish plotly plot to your plot.ly online account when you are happy with it
+plotly_POST(droughtPlot.plotly)
+
+
 ## ----import-discharge, echo=FALSE----------------------------------------
 #SOURCe
 #http://nwis.waterdata.usgs.gov/co/nwis/uv/?cb_00065=on&cb_00060=on&format=rdb&site_no=06730200&period=&begin_date=2013-01-01&end_date=2013-12-31
