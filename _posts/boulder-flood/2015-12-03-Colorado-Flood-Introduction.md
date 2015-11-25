@@ -49,7 +49,12 @@ heavy rain & devastating flooding in colorado.
 </figure>
 
 **maps of impact** 
+The map below shows 
 
+1. the designated floodplain for Boulder County, Colorado. 
+2. the regions around that floodplain that were inundated or flooded. 
+
+{% include /maps/_boulderFloodplain.html %}
 
 **plots of precip and discharge here**
 
