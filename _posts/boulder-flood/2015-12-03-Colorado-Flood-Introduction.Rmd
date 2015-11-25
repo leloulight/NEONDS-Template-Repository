@@ -59,7 +59,13 @@ The map below shows
 **plots of precip and discharge here**
 
 
-###Hourly Precipitation
+#The Impact of Rainfall
+
+Background -- 
+**what causes large rain events**
+**what is normal rainfal for a region**
+**is / how is rainfall changing?**
+
 
 ![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/daily-summaries-1.png) 
 
