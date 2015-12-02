@@ -48,7 +48,7 @@ droughtPlot.plotly <- ggplot(data=drought2005.2015,
 ggplotly()
 
 #publish plotly plot to your plot.ly online account when you are happy with it
-plotly_POST(droughtPlot.plotly)
+#plotly_POST(droughtPlot.plotly)
 
 
 ## ----import-discharge, echo=FALSE----------------------------------------

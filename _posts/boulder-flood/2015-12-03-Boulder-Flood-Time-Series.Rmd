@@ -41,6 +41,8 @@ library(ggplot2)
 05 Rio Grand
 Stuff about the index will go here
 
+https://www.drought.gov/drought/content/products-current-drought-and-monitoring-drought-indicators/palmer-drought-severity-index
+
 ```{r drought-data }
 #Import State Wide index data
 drought <- read.csv("drought/CDODiv8721376888863_CO.txt", header = TRUE)
@@ -89,7 +91,7 @@ droughtPlot.plotly <- ggplot(data=drought2005.2015,
 ggplotly()
 
 #publish plotly plot to your plot.ly online account when you are happy with it
-plotly_POST(droughtPlot.plotly)
+#plotly_POST(droughtPlot.plotly)
 
 ```
 

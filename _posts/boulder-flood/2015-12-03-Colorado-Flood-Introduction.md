@@ -4,7 +4,7 @@ title: "Understanding the 2013 Colorado Floods - #WorkWithData"
 date:  2015-11-23
 authors: [Leah A. Wasser]
 dateCreated:  2015-05-18
-lastModified: 2015-11-25
+lastModified: 2015-12-02
 categories: [Coding and Informatics]
 category: coding-and-informatics
 tags: [R, time-series]
@@ -23,6 +23,9 @@ comments: false
 
 {% include _toc.html %}
 
+ 
+* <a href="http://coflood2013.colostate.edu/timeline_impacts.html" target="_blank">A nice timeline of the events leading up to and during the flood:</a>
+
 In September 2013 a slow moving cold front moved through Colorado, intersecting 
 with a warm humid front. The clash between the cold and warm fronts yielded 
 heavy rain & devastating flooding in colorado.
@@ -33,33 +36,40 @@ heavy rain & devastating flooding in colorado.
 **images of the event here**
 
 
-<Something about where the data below come from??>
+Below - an animation of the storm front that triggered the 2013 Colorador floods.
 
 <figure>
 <a href="https://en.wikipedia.org/wiki/2013_Colorado_floods#/media/File:North_American_Water_Vapor_Systems.gif">
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/North_American_Water_Vapor_Systems.gif"></a>
     <figcaption>This is an animated loop of water vapor systems over the western 
     area of North America on September 12th, 2013 as shown by the GOES-15 and 
-    GOES-13 satellites. The storm that caused the 2013 Colorado flooding was kept 
-    in a confined area over the Eastern Range of the Rocky Mountains in Colorado 
-    by these water vapor systems. SOURCES: Cooperative Institute for Meteorological 
-    Satellite Studies (CIMSS), University of Wisconsin – Madison, USA -
+    GOES-13 satellites. The storm that caused the 2013 Colorado flooding was 
+    kept in a confined area over the Eastern Range of the Rocky Mountains in 
+    Colorado by these water vapor systems. SOURCES: Cooperative Institute for
+    Meteorological Satellite Studies (CIMSS), University of Wisconsin – Madison,
+    USA -
     [CIMSS](http://cimss.ssec.wisc.edu/goes/blog/archives/13876)</figcaption>
 
 </figure>
 
-**maps of impact** 
-The map below shows 
 
-1. the designated floodplain for Boulder County, Colorado. 
-2. the regions around that floodplain that were inundated or flooded. 
 
-{% include /maps/_boulderFloodplain.html %}
 
-**plots of precip and discharge here**
+
 
 #Drought and Rain
-Get Palmer data
+
+##Palmer Drought Index
+
+Below is the palmer index from 1990 to 2015 for Colorado
+What are the patterns of drought observed in PA based upon this index?
+
+![]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/drought-data-1.png)
+
+
+1. When did the Palmer index begin a positive cycle? 
+2. Did the negative cycles coincide with the floods?
+
 
 <div>
     <a href="https://plot.ly/~leahawasser/145/" target="_blank" title="Palmer Drought Severity Index - Colorado" style="display: block; text-align: center;"><img src="https://plot.ly/~leahawasser/145.png" alt="Palmer Drought Severity Index - Colorado" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
@@ -67,7 +77,7 @@ Get Palmer data
 </div>
 
 
-#http://www7.ncdc.noaa.gov/CDO/CDODivisionalSelect.jsp#
+http://www7.ncdc.noaa.gov/CDO/CDODivisionalSelect.jsp#
 
 #The Impact of Rainfall
 
@@ -77,7 +87,7 @@ Background --
 **is / how is rainfall changing?**
 
 
-![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/daily-summaries-1.png) 
+![ ]({{ site.baseurl }}/images/rfigs/2015-12-03-Boulder-Flood-Time-Series/import-precip-1.png) 
 
 Below is a plot of hourly precipitation between August 15 - October 15 2015. Explore
 the data and answer the following questions
