@@ -53,3 +53,14 @@ on <a href="http://neondataskills.org/remote-sensing/1_About-LiDAR-Data-Light-De
 
 
 
+#Light Detection and Ranging
+
+<figure>
+
+<img src="http://data-lessons.github.io/NEON-R-Spatial-Raster/images/raster_timeseries/lidarTree-height.png">
+<figcaption>Digital Terrain Models, Digital Surface Models and Canopy height
+models are three common lidar derived data products. The digital terrain model
+allows scientists to study changes in terrain (topography) over time.
+</figcaption>
+</figure>
+
