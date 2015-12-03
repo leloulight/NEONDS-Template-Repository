@@ -4,7 +4,7 @@ title: "Understanding the 2013 Colorado Floods: Before Class Materials"
 date:  2015-11-23
 authors: [Leah A. Wasser, Megan A. Jones]
 dateCreated:  2015-11-23
-lastModified: 2015-12-02
+lastModified: 2015-12-03
 categories: [Coding and Informatics]
 category: coding-and-informatics
 tags: [R, time-series]
