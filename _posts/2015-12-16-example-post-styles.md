@@ -74,3 +74,17 @@ Two images side by side:
         <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
         <figcaption>Caption describing these two images.</figcaption>
     </figure>
+    
+    <div id="challenge" markdown="1">
+    ##Challenge
+    
+    Here is some challenge text.
+    * it can have bullets
+    * another bullet
+    
+    It can have quotes too
+    
+    >like this
+    >and this
+    
+    </div>
