@@ -1,23 +1,25 @@
 ---
 layout: post
-title: "This is a post - Title Goes Here"
-date: 2015-12-07
-authors: [Leah A. Wasser, Mariela Perignon]
-dateCreated: 2015-05-18
-lastModified: `r format(Sys.time(), "%Y-%m-%d")`
-categories: [Coding and Informatics]
+title: "R: Creating HDF5 Files in R Using Loops"
+date:   2015-1-29 15:22:52
+dateCreated: 2014-11-18 20:49:52
+lastModified: 2015-05-19 20:49:52
+estimatedTime: 1.0 - 1.5 Hours
+packagesLibraries: RHDF5
+authors: Ted Hart, Leah Wasser - Adapted from Software Carpentry Materials by Leah A. Wasser
+contributors: Elizabeth Webb
+categories: [coding-and-informatics]
 category: coding-and-informatics
-tags: [R, time-series]
-mainTag: GIS-Spatial-Data
-scienceThemes: [phenology, disturbance]
-description: "Description goes here."
+tags: [HDF5,R]
+mainTag: HDF5
+description: "Create a HDF5 in R from scratch! Add groups and datasets. View the files in the HDFviewer."
+code1: R_Create_Modify_Hdf5.R
 image:
-  feature: TeachingModules.jpg
-  credit: A National Ecological Observatory Network (NEON) - Teaching Module
+  feature: hierarchy_folder_purple.png
+  credit: Colin Williams NEON, Inc.
   creditlink: http://www.neoninc.org
-permalink: /example-post/
-code1: Boulder-Flood-Data.R
-comments: false
+permalink: /HDF5/Create-HDF5-In-R/
+comments: true
 ---
 
 {% include _toc.html %}
