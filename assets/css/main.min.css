@@ -4504,3 +4504,14 @@ img.load {
 .NEON-header:after {
 	clear: both
 }
+
+/* adding example challenge styles */
+div#challenge {
+    background-color: #ffffcc;
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+div#challenge h2 {
+    background-color: #ffffcc;
+}
