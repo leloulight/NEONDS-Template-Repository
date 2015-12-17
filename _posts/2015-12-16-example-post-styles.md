@@ -40,3 +40,37 @@ Code for a data tip:
 <i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip.
 {: .notice}
 
+
+***
+
+Code for a quote block:
+
+>Here is a quote block
+>you can use all sorts of different spacing and bullets in it too
+>
+> * list one
+> * list two
+> but you have to use a `>` on each line for it to work which is a pain.
+
+    >Here is a quote block
+    >you can use all sorts of different spacing and bullets in it too
+    >
+    > * list one
+    > * list two
+    > but you have to use a `>` on each line for it to work which is a pain.
+
+
+***
+Two images side by side:
+
+<figure class="half">
+    <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
+    <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
+    <figcaption>Caption describing these two images.</figcaption>
+</figure>
+
+    <figure class="half">
+        <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
+        <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
+        <figcaption>Caption describing these two images.</figcaption>
+    </figure>
