@@ -15,7 +15,7 @@ image:
   feature: TeachingModules.jpg
   credit: A National Ecological Observatory Network (NEON) - Teaching Module
   creditlink: http://www.neoninc.org
-permalink: /example-post
+permalink: /example-post/
 code1: Boulder-Flood-Data.R
 comments: false
 ---
