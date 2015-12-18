@@ -2,9 +2,9 @@
 layout: post
 title: "Quantifying Disturbance Events: 2013 Colorado Floods Overview"
 date:  2015-11-23
-authors: [Leah A. Wasser, Megan A. Jones]
+authors: [Leah A. Wasser, Mariela Perignon, Megan A. Jones]
 dateCreated:  2015-11-23
-lastModified: `r format(Sys.time(), "%Y-%m-%d")`
+lastModified: 2015-12-04
 categories: [Coding and Informatics]
 category: coding-and-informatics
 tags: [R, time-series]
@@ -88,11 +88,7 @@ Below - an animation of the storm front that triggered the 2013 Colorador floods
 </figure>
 
 
-```{r echo=FALSE, results='hide'}
-#the code for a leaflet embed
-#{% include /maps/_boulderFloodplain.html %}
 
-```
 
 
 ###Why was The Flooding so Destructive? 

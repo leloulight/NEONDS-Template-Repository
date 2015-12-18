@@ -9,15 +9,6 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/highlightjs/styles/zenburn.css">
 <script src="{{ site.baseurl }}/assets/highlightjs/highlight.packR.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
-
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>  
-<script src="{{site.baseurl}}/assets/js/leaflet.ajax.min.js"></script>
-
-<style>
-    #map{ width: 700px; height: 300px; }
-</style>
 </head>
 
 <body class="post">
@@ -46,6 +37,13 @@
     </div><!--/ .headline-wrap -->
 
     <div class="article-wrap">
+    <!-- List authors at the top of the lesson -->
+    <span class="post-date">
+    Authors: {{ page.authors | join: ', ' %}}<br>
+    {% if page.contributors %}
+    Reviewers: {{ page.contributors | join: ', ' %}}
+    {% endif %}   
+     </span>
       {{ content }}
 
 

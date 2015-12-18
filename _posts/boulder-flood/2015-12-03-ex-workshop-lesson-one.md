@@ -1,27 +1,40 @@
 ---
 layout: post
-title: "Quantifying Disturbance Events Drivers & Impacts: Precipitation & Discharge"
-date:  2015-11-23
+title: "Understanding the 2013 Colorado Floods - #WorkWithData"
+date: 2015-11-23
 authors: [Leah A. Wasser]
-dateCreated:  2015-05-18
-lastModified: `r format(Sys.time(), "%Y-%m-%d")`
+dateCreated: 2015-05-18
+lastModified: 2015-12-04
 categories: [Coding and Informatics]
 category: coding-and-informatics
 tags: [R, time-series]
 mainTag:
 scienceThemes: [phenology, disturbance]
-description: "The overview page i'll use at CU Dec 2015."
+description: "The overview page I'll use at CU Dec 2015."
 code1:
 image:
   feature: TeachingModules.jpg
   credit: A National Ecological Observatory Network (NEON) - Teaching Module
   creditlink: http://www.neoninc.org
-permalink: /R/Boulder-Flood-Overview/
+permalink: /R/Boulder-Flood-Overview5/
 code1: Boulder-Flood-Data.R
 comments: false
 ---
 
 {% include _toc.html %}
+
+ 
+* <a href="http://coflood2013.colostate.edu/timeline_impacts.html" target="_blank">A nice timeline of the events leading up to and during the flood:</a>
+
+In September 2013 a slow moving cold front moved through Colorado, intersecting 
+with a warm humid front. The clash between the cold and warm fronts yielded 
+heavy rain & devastating flooding in colorado.
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XwbdAJGvj_o" frameborder="0" allowfullscreen></iframe>
+
+**images of the event here**
+
 
 Below - an animation of the storm front that triggered the 2013 Colorador floods.
 
@@ -40,11 +53,7 @@ Below - an animation of the storm front that triggered the 2013 Colorador floods
 </figure>
 
 
-```{r echo=FALSE, results='hide'}
-#the code for a leaflet embed
-#{% include /maps/_boulderFloodplain.html %}
 
-```
 
 
 
