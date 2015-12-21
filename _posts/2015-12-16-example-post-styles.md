@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Title of Post Here"
-date: 2015-01-29
+description: "This is a sample post to document and explore available styles."
+date: 2015-12-18
 dateCreated: 2014-11-18
 lastModified: 2015-05-19
 estimatedTime: 1.0 - 1.5 Hours
@@ -10,12 +11,11 @@ authors: [Author One, Author Two]
 contributors: [Contributor One]
 categories: [coding-and-informatics]
 category: coding-and-informatics
-tags: [HDF5,R]
+tags: [HDF5, R]
 mainTag: HDF5
-description: "Description Here."
 code1: R-code-File-Name-Here.R
 image:
-  feature: hierarchy_folder_purple.png
+  feature: TeachingModules.jpg
   credit: Colin Williams NEON, Inc.
   creditlink: http://www.neoninc.org
 permalink: /example-post/
@@ -25,6 +25,9 @@ comments: false
 {% include _toc.html %}
 
 #Heading one
+Introduction to the page goes here
+
+
 
 ##Heading two
 
@@ -60,34 +63,55 @@ Code for a quote block:
     > but you have to use a `>` on each line for it to work which is a pain.
 
 
+A rule is below:
+
 ***
+    #create rule
+    ***
+
+    
+Render One Image
+
+<figure>
+    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
+    <figcaption>Caption describing the above image, Image Source: source here.</figcaption>
+</figure>
+
+	<figure>
+	    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
+	    <figcaption>Caption describing the above image, Image Source: source here.</figcaption>
+	</figure>
+
 Two images side by side:
 
 <figure class="half">
-    <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
-    <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
+    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
+    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
     <figcaption>Caption describing these two images.</figcaption>
 </figure>
 
     <figure class="half">
-        <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
+        <a href="{{ site.baseurl}}/images/image-filename-1-large.jpg"><img src="{{ site.baseurl}}/images/600x300.jpg"></a>
         <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
         <figcaption>Caption describing these two images.</figcaption>
     </figure>
     
 ***
 
+Trying out a nice light color to make the challenges stand out. It might be nice to also add a small icon for challenges like SWC uses? or not.
+
 <div id="challenge" markdown="1">
 ##Challenge
   
 Here is some challenge text.
-* it can have bullets
-* another bullet
+
+* It can have bullets
+* Another bullet
   
-It can have quotes too
-  
->like this
->and this
+some more text here
+
+**bolding stuff**
+*italicize stuff*
 
 </div>
   
@@ -99,9 +123,9 @@ It can have quotes too
     * it can have bullets
     * another bullet
     
-    It can have quotes too
-    
-    >like this
-    >and this
+    some more text here
+
+    **bolding stuff**
+    *italicize stuff*
     
     </div>
