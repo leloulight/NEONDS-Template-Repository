@@ -16,7 +16,7 @@ mainTag: HDF5
 code1: R-code-File-Name-Here.R
 image:
   feature: TeachingModules.jpg
-  credit: Colin Williams NEON, Inc.
+  credit:
   creditlink: http://www.neoninc.org
 permalink: /example-post/
 comments: false
@@ -41,7 +41,7 @@ After completing this activity, you will:
 
 ##Things You’ll Need To Complete This Lesson
 
-To complete this lesson: you will need the most current version of R, and 
+To complete this lesson you will need the most current version of R, and 
 preferably RStudio, loaded on your computer.
 
 ###Install R Packages
@@ -49,6 +49,7 @@ preferably RStudio, loaded on your computer.
 * **library:** `install.packages("library")`
 * **rgdal:** `install.packages("rgdal")`
 
+[{{ site.baseurl }} R/Packages-In-R/](More on Packages in R - Adapted from Software Carpentry.)
 
 ###Download Data
 
@@ -76,13 +77,15 @@ data in R <<link here>>
 
 	##Things You’ll Need To Complete This Lesson
 
-	**To complete this lesson:** you will need the most current version of R, and 
+	To complete this lesson you will need the most current version of R, and 
 	preferably RStudio, loaded on your computer.
 
 	###R Libraries to Install:
 
 	* **library:** `install.packages("library")`
 	* **rgdal:** `install.packages("rgdal")`
+
+	[ {{ site.baseurl }} R/Packages-In-R/](More on Packages in R - Adapted from Software Carpentry.)
 
 	###Download Data
 
@@ -110,10 +113,12 @@ Introduction to the page goes here
 
 Code for a data tip:
 
-    <i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip.
+    <i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. Sometimes it
+    might have some `code` in it
     {: .notice}
 
-<i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip.
+<i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. Sometimes it
+    might have some `code` in it
 {: .notice}
 
 
