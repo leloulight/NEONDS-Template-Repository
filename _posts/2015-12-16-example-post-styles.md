@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Title of Post Here"
-description: "This is a sample post to document and explore available styles."
+title: "Title of Post Here - This Is An Example Post"
+description: "This is a sample post to document and explore available styles. Description should be fully in 
+PLAIN TEXT."
 date: 2015-12-18
 dateCreated: 2014-11-18
-lastModified: `r format(Sys.time(), "%Y-%m-%d")`
+lastModified: 2016-01-04
 estimatedTime: 1.0 - 1.5 Hours
 packagesLibraries: RHDF5
 authors: [Author One, Author Two]
@@ -13,20 +14,94 @@ categories: [coding-and-informatics]
 category: coding-and-informatics
 tags: [HDF5, R]
 mainTag: HDF5
-<<<<<<< HEAD
-description: "Description Here With No Code Notes (e.g. `R`)."
-=======
->>>>>>> 7d4a2b2de12f7d317f89027effce19d0890bf468
 code1: R-code-File-Name-Here.R
 image:
   feature: TeachingModules.jpg
-  credit: Colin Williams NEON, Inc.
-  creditlink: http://www.neoninc.org
+  credit:
+  creditlink:
 permalink: /example-post/
 comments: false
 ---
 
 {% include _toc.html %}
+
+
+	#include table of contents using include file
+    # {  include _toc.html %}
+
+
+**R Skill Level:** Intermediate - you’ve got the basics of R down.
+
+<div id="objectives" markdown="1">
+
+#Goals / Objectives
+After completing this activity, you will:
+
+* Objective 1
+* Be able to extract values from raster that correspond to a vector file overlay.
+
+##Things You’ll Need To Complete This Lesson
+
+To complete this lesson you will need the most current version of R, and 
+preferably RStudio, loaded on your computer.
+
+###Install R Packages
+
+* **library:** `install.packages("library")`
+* **rgdal:** `install.packages("rgdal")`
+
+[{{ site.baseurl }} R/Packages-In-R/](More on Packages in R - Adapted from Software Carpentry.)
+
+###Download Data
+
+{% include/dataSubsets/_data_Landsat-NDVI.html %}
+{% include/dataSubsets/_data_Landsat-NDVI.html %}
+
+	
+****
+
+{% include/_greyBox-wd-rscript.html %}
+
+
+**Raster Lesson Series :** This lesson is a part of a lesson series on raster 
+data in R <<link here>>
+
+
+</div>
+
+	<div id="objectives" markdown="1">
+
+	#Goals / Objectives
+	After completing this activity, you will:
+	* Objective 1
+	* Objective 2 
+
+	##Things You’ll Need To Complete This Lesson
+
+	To complete this lesson you will need the most current version of R, and 
+	preferably RStudio, loaded on your computer.
+
+	###R Libraries to Install:
+
+	* **library:** `install.packages("library")`
+	* **rgdal:** `install.packages("rgdal")`
+
+	[ {{ site.baseurl }} R/Packages-In-R/](More on Packages in R - Adapted from Software Carpentry.)
+
+	###Download Data
+
+	{ include/dataSubsets/_data_Landsat-NDVI.html %}
+	{ include/dataSubsets/_data_Landsat-NDVI.html %}
+	
+
+	{ include/_greyBox-wd-rscript.html %}
+	
+	**Raster Lesson Series :** This lesson is a part of a lesson series on raster 
+data in R <<link here>>
+	NOTE: the above text could be an include file that reads YAML elements
+	</div>
+
+#Heading one - TITLE
 
 ##About
 1-2 sentences describing what the lesson is about
@@ -77,10 +152,12 @@ For a pale grey horizontal line: ***
 ***
 Code for a data tip:
 
-    <i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip.
+    <i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. Sometimes it
+    might have some `code` in it
     {: .notice}
 
-<i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip.
+<i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. Sometimes it
+    might have some `code` in it
 {: .notice}
 
 
@@ -145,22 +222,11 @@ Render One Image
 Two images side by side:
 
 <figure class="half">
-<<<<<<< HEAD
-    <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
-    <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
-    <figcaption>Caption describing these two images.  Image Source: Here </figcaption>
-=======
-    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
-    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
+    <a href="{{site.baseurl}}/images/600x300.jpg"><img src="{{site.baseurl}}/images/600x300.jpg"></a>
+    <a href="{{site.baseurl}}/images/600x300.jpg"><img src="{{site.baseurl}}/images/600x300.jpg"></a>
     <figcaption>Caption describing these two images.</figcaption>
->>>>>>> 7d4a2b2de12f7d317f89027effce19d0890bf468
 </figure>
 
-    <figure class="half">
-        <a href="{{ site.baseurl}}/images/image-filename-1-large.jpg"><img src="{{ site.baseurl}}/images/600x300.jpg"></a>
-        <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
-        <figcaption>Caption describing these two images.Image Source: Here </figcaption>
-    </figure>
     
 ***
 
@@ -183,7 +249,6 @@ or
 It can have quotes too!
 
 >like this
-=======
 * It can have bullets
 * Another bullet
   
@@ -191,18 +256,11 @@ some more text here
 
 **bolding stuff**
 *italicize stuff*
->>>>>>> 7d4a2b2de12f7d317f89027effce19d0890bf468
 
->even multiple paragraphs
+it can have multiple paragraphs, too.
 </div>
 
-``` {r challenge-code-name-here, echo=FALSE}
-# we don't want challenge code to post but do want it to appear in the .R
-# script.
 
-# If you want figures but no code or results to appear
-#  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
-```
 
 
 
@@ -226,6 +284,16 @@ some more text here
   >even multiple paragraphs
   </div>
   
+  
+``` {r challenge-code-name-here, echo=FALSE}
+# we don't want challenge code to post but do want it to appear in the .R
+# script.
+
+# If you want figures but no code or results to appear
+#  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
+```
+
+
   ``` {r challenge-code-name-here, echo=FALSE}
   # we don't want challenge code to post but do want it to appear in the .R
   # script.
@@ -234,20 +302,4 @@ some more text here
   #  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
   
   ```
-  
-<<<<<<< HEAD
-=======
-    <div id="challenge" markdown="1">
-    ##Challenge
-    
-    Here is some challenge text.
-    * it can have bullets
-    * another bullet
-    
-    some more text here
 
-    **bolding stuff**
-    *italicize stuff*
-    
-    </div>
->>>>>>> 7d4a2b2de12f7d317f89027effce19d0890bf468
