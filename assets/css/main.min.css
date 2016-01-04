@@ -1058,14 +1058,13 @@ svg:not(:root) {
 }
 .btn-success {
 	color: #fff;
+	background-color: #1ea0c1;
+	border-color: #1ea0c1;
 	/* 
-	##old colors
 	background-color: #5cb85c;
 	border-color: #5cb85c
 	*/
-	background-color: #1ea0c1;
-	border-color: #1ea0c1;
-	
+
 }
 .btn-success:visited {
 	color: #fff
@@ -4347,11 +4346,17 @@ div.article-author-side h5 a{
 	color:#525252
 }
 
+.post-date {
+	font-size: 0.85em;
+	font-style: italic;
+	}
+	
 /* GREY BOX CODE */ 
 
 #objectives > h1 {
     font-size: 1.75rem;
     margin: 1rem 0 .925rem;
+}
 	
 /* ################### table Formating ################# */
 
@@ -4377,9 +4382,6 @@ td a {
 
 
 
-.post-date {font-size: 0.85em;
-	font-style:italic
-	}
 
 /* ################### code Formating ################# */	
 	
