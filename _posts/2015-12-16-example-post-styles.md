@@ -66,6 +66,12 @@ preferably RStudio, loaded on your computer.
 **Raster Lesson Series :** This lesson is a part of a lesson series on raster 
 data in R <<link here>>
 
+*** 
+
+###Additional Resources
+
+* one resources
+* another 
 
 </div>
 
