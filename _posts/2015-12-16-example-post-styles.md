@@ -26,14 +26,14 @@ comments: false
 
 
 	#include table of contents
-     	# {% include _toc.html %}
+     	# {  include _toc.html %}
 
 
-R Skill Level: Intermediate - you’ve got the basics of R down.
+**R Skill Level:** Intermediate - you’ve got the basics of R down.
 
 <div id="objectives" markdown="1">
 
-##Goals / Objectives
+#Goals / Objectives
 After completing this activity, you will:
 
 * Objective 1
@@ -41,14 +41,13 @@ After completing this activity, you will:
 
 ##Things You’ll Need To Complete This Lesson
 
-**To complete this lesson:** you will need the most current version of R, and 
+To complete this lesson: you will need the most current version of R, and 
 preferably RStudio, loaded on your computer.
 
-###R Libraries to Install:
+###Install R Packages
 
 * **library:** `install.packages("library")`
 * **rgdal:** `install.packages("rgdal")`
-
 
 
 ###Download Data
