@@ -5,7 +5,7 @@ tag: data-viz
 permalink: data-viz/
 image:
   feature: planeBanner.png
-  credit: Colin Williams NEON, Inc.
+  credit:
   creditlink: 
 ---
 

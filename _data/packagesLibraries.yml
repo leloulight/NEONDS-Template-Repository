@@ -1,0 +1,20 @@
+- slug: dplyr 
+  name: dplyr
+  
+- slug: ggplot
+  name: ggplot
+
+- slug: lubridate
+  name: lubridate (time series)  
+  
+- slug: raster
+  name: raster   
+  
+- slug: rasterVis
+  name: rasterVis (raster time series) 
+  
+- slug: rgdal
+  name: rgdal (GIS) 
+  
+
+  

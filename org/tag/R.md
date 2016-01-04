@@ -4,8 +4,8 @@ title: 'Articles by tag: R'
 tag: R
 permalink: R/
 image:
-  feature: RBanner.png
-  credit: Colin Williams NEON, Inc.
+  feature: NEONCarpentryHeader_2.png
+  credit: 
 ---
 
 This will list all pages with r code.
