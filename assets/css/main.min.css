@@ -4357,6 +4357,10 @@ div.article-author-side h5 a{
     font-size: 1.75rem;
     margin: 1rem 0 .925rem;
 }
+
+p .btn.btn-success {
+    margin: 0;
+}
 	
 /* ################### table Formating ################# */
 
