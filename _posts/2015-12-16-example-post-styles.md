@@ -4,7 +4,7 @@ title: "Title of Post Here"
 description: "This is a sample post to document and explore available styles."
 date: 2015-12-18
 dateCreated: 2014-11-18
-lastModified: 2015-05-19
+lastModified: `r format(Sys.time(), "%Y-%m-%d")`
 estimatedTime: 1.0 - 1.5 Hours
 packagesLibraries: RHDF5
 authors: [Author One, Author Two]
@@ -13,6 +13,7 @@ categories: [coding-and-informatics]
 category: coding-and-informatics
 tags: [HDF5, R]
 mainTag: HDF5
+description: "Description Here With No Code Notes (e.g. `R`)."
 code1: R-code-File-Name-Here.R
 image:
   feature: TeachingModules.jpg
@@ -25,8 +26,8 @@ comments: false
 {% include _toc.html %}
 
 
-	#include table of contents
-     	# {  include _toc.html %}
+	#include table of contents using include file
+    # {  include _toc.html %}
 
 
 **R Skill Level:** Intermediate - you’ve got the basics of R down.
@@ -101,6 +102,44 @@ data in R <<link here>>
 	</div>
 
 #Heading one - TITLE
+
+##About
+1-2 sentences describing what the lesson is about
+
+**R Skill Level:** Intermediate - you've got the basics of `R` down.
+
+<div id="objectives" markdown="1">
+##Goals / Objectives
+After completing this activity, you will:
+
+ * Be able to XXX.
+ 
+##Things You'll Need To Complete This Lesson
+You will need the most current version of `R` and, preferably, RStudio loaded on
+your computer to complete this lesson.
+
+##R Libraries to Install:
+* **packageName:** `install.packages("NAME")`
+
+<a href="{{ site.baseurl }}/R/Packages-In-R/" target="_blank"> 
+More on Packages in R - Adapted from Software Carpentry.</a>
+
+##Data to Download
+Can be a link or an _include file. 
+
+**Set Working Directory:** This lessons assumes that you have set your working 
+directory to the location of the downloaded and unzipped data subset. 
+[An overview of setting the working directory in `R` can be found here.]({{site.baseurl}}/R/Set-Working-Directory "R Working Directory Lesson") 
+
+**Challenge Code:** NEON Data Skills tutorials often contain challenges that
+reinforce learned skills. If available, the code for challenge solutions is
+found in adownloadable `R` script available on the footer of each lesson page.
+
+** Lesson Series: ** This lesson is a part of a lesson series on XXX 
+data in `R`.  (Delete if not applicable)
+</div> 
+
+#Heading one
 Introduction to the page goes here
 
 
@@ -109,8 +148,8 @@ Introduction to the page goes here
 
 ###Heading three
 
+For a pale grey horizontal line: ***
 ***
-
 Code for a data tip:
 
     <i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. Sometimes it
@@ -140,6 +179,26 @@ Code for a quote block:
     > * list two
     > but you have to use a `>` on each line for it to work which is a pain.
 
+***
+Any image with caption & source:
+
+<figure>
+    <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
+    <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
+    <figcaption> Caption here. Image Source: NEON,Inc.  
+    </figcaption>
+</figure>
+
+    <figure>
+       <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
+       <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
+      <figcaption> Caption here. Image Source: NEON,Inc.  
+      </figcaption>
+    </figure>
+
+
+replace "{{ site.baseurl }}/images/pnt_line_poly.png"  with the full URL if 
+image is not in the images folder. 
 
 A rule is below:
 
@@ -163,16 +222,11 @@ Render One Image
 Two images side by side:
 
 <figure class="half">
-    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
-    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
+    <a href="{{site.baseurl}}/images/600x300.jpg"><img src="{{site.baseurl}}/images/600x300.jpg"></a>
+    <a href="{{site.baseurl}}/images/600x300.jpg"><img src="{{site.baseurl}}/images/600x300.jpg"></a>
     <figcaption>Caption describing these two images.</figcaption>
 </figure>
 
-    <figure class="half">
-        <a href="{{ site.baseurl}}/images/image-filename-1-large.jpg"><img src="{{ site.baseurl}}/images/600x300.jpg"></a>
-        <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
-        <figcaption>Caption describing these two images.</figcaption>
-    </figure>
     
 ***
 
@@ -183,6 +237,18 @@ Trying out a nice light color to make the challenges stand out. It might be nice
   
 Here is some challenge text.
 
+<<<<<<< HEAD
+* it can have bullets
+* another bullet
+
+or 
+
+1. a numbered list
+2. or two 
+  
+It can have quotes too!
+
+>like this
 * It can have bullets
 * Another bullet
   
@@ -191,19 +257,49 @@ some more text here
 **bolding stuff**
 *italicize stuff*
 
+it can have multiple paragraphs, too.
 </div>
-  
-  
-    <div id="challenge" markdown="1">
-    ##Challenge
-    
-    Here is some challenge text.
-    * it can have bullets
-    * another bullet
-    
-    some more text here
 
-    **bolding stuff**
-    *italicize stuff*
-    
-    </div>
+
+
+
+
+  <div id="challenge" markdown="1">
+  ##Challenge
+  
+  Here is some challenge text.
+
+  * it can have bullets
+  * another bullet
+
+  or 
+
+  1. a numbered list
+  2. or two 
+  
+  It can have quotes too!
+
+  >like this
+
+  >even multiple paragraphs
+  </div>
+  
+  
+``` {r challenge-code-name-here, echo=FALSE}
+# we don't want challenge code to post but do want it to appear in the .R
+# script.
+
+# If you want figures but no code or results to appear
+#  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
+```
+
+
+  ``` {r challenge-code-name-here, echo=FALSE}
+  # we don't want challenge code to post but do want it to appear in the .R
+  # script.
+  
+  # If you want figures but no code or results to appear
+  #  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
+  
+  ```
+
