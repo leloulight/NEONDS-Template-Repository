@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Title of Post Here"
-description: "This is a sample post to document and explore available styles."
+title: "Title of Post Here - This Is An Example Post"
+description: "This is a sample post to document and explore available styles. Description should be fully in 
+PLAIN TEXT."
 date: 2015-12-18
 dateCreated: 2014-11-18
-lastModified: `r format(Sys.time(), "%Y-%m-%d")`
+lastModified: 2016-01-04
 estimatedTime: 1.0 - 1.5 Hours
 packagesLibraries: RHDF5
 authors: [Author One, Author Two]
@@ -13,12 +14,11 @@ categories: [coding-and-informatics]
 category: coding-and-informatics
 tags: [HDF5, R]
 mainTag: HDF5
-description: "Description Here With No Code Notes (e.g. `R`)."
 code1: R-code-File-Name-Here.R
 image:
   feature: TeachingModules.jpg
   credit:
-  creditlink: http://www.neoninc.org
+  creditlink:
 permalink: /example-post/
 comments: false
 ---
