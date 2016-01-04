@@ -4524,6 +4524,7 @@ div#challenge {
     border: 1px solid #ccc;
     padding: 1em;
     border-radius: 1em;
+    box-shadow: 1px 5px 3px #ccc;
 }
 
 div#challenge h2 {
