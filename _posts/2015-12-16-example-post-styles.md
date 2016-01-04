@@ -24,7 +24,81 @@ comments: false
 
 {% include _toc.html %}
 
-#Heading one
+
+	#include table of contents
+     	# {% include _toc.html %}
+
+
+R Skill Level: Intermediate - you’ve got the basics of R down.
+
+<div id="objectives" markdown="1">
+
+##Goals / Objectives
+After completing this activity, you will:
+
+* Objective 1
+* Be able to extract values from raster that correspond to a vector file overlay.
+
+##Things You’ll Need To Complete This Lesson
+
+**To complete this lesson:** you will need the most current version of R, and 
+preferably RStudio, loaded on your computer.
+
+###R Libraries to Install:
+
+* **library:** `install.packages("library")`
+* **rgdal:** `install.packages("rgdal")`
+
+
+
+###Download Data
+
+{% include/dataSubsets/_data_Landsat-NDVI.html %}
+{% include/dataSubsets/_data_Landsat-NDVI.html %}
+
+	
+****
+
+{% include/_greyBox-wd-rscript.html %}
+
+
+**Raster Lesson Series :** This lesson is a part of a lesson series on raster 
+data in R <<link here>>
+
+
+</div>
+
+	<div id="objectives" markdown="1">
+
+	#Goals / Objectives
+	After completing this activity, you will:
+	* Objective 1
+	* Objective 2 
+
+	##Things You’ll Need To Complete This Lesson
+
+	**To complete this lesson:** you will need the most current version of R, and 
+	preferably RStudio, loaded on your computer.
+
+	###R Libraries to Install:
+
+	* **library:** `install.packages("library")`
+	* **rgdal:** `install.packages("rgdal")`
+
+	###Download Data
+
+	{ include/dataSubsets/_data_Landsat-NDVI.html %}
+	{ include/dataSubsets/_data_Landsat-NDVI.html %}
+	
+
+	{ include/_greyBox-wd-rscript.html %}
+	
+	**Raster Lesson Series :** This lesson is a part of a lesson series on raster 
+data in R <<link here>>
+	NOTE: the above text could be an include file that reads YAML elements
+	</div>
+
+#Heading one - TITLE
 Introduction to the page goes here
 
 
