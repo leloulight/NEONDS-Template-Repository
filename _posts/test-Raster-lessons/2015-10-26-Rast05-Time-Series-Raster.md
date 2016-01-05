@@ -8,7 +8,7 @@ contributors: [Megan A. Jones]
 packagesLibraries: [raster, rgdal, rasterVis]
 dateCreated:  2014-11-26
 lastModified: 2015-12-30
-category: time-series-workshop
+categories: [self-paced-tutorial]
 tags: [R, raster, time-series, GIS-spatial-data]
 mainTag: raster-ts-wrksp
 workshopSeries: [raster-time-series]

@@ -8,7 +8,7 @@ contributors: [Megan A. Jones]
 packagesLibraries: [raster, rgdal]
 dateCreated: 2014-11-26
 lastModified: 2015-12-30
-category: time-series-workshop
+categories: [self-paced-tutorial]
 tags: [raster-ts-wrksp, raster]
 mainTag: raster-ts-wrksp
 description: "This lesson will explore a way to extract NDVI values from a

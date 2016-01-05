@@ -1,88 +1,74 @@
 ---
 layout: post
-title: "TEST Lesson 00: Intro"
+title: "About Categories, Tags and Other YAML organized tutorials"
 date:   2015-10-29
-authors: [Kristina Riemer, Zack Brym, Jason Williams, Jeff Hollister,  Mike Smorul, Leah Wasser]
-contributors: [Megan A. Jones]
+authors: [Leah Wasser, Megan A. Jones]
+contributors: [Contributor One]
 dateCreated: 2015-10-23
 lastModified: 2015-12-30
-packagesLibraries: [raster, rgdal]
+packagesLibraries: [raster, rgdal, dplyr]
 workshopSeries: [raster-data]
-category:  
+categories: [self-paced-tutorial]
 tags: [raster, GIS-spatial-data, raster-ts-wrksp]
 mainTag: raster-ts-wrksp
-description: "This lesson reviews the fundamental principles, libraries and 
-metadata / raster attributes that are needed to work with raster data in R."
-code1: SR00-Raster-Structure.R
+description: "This page overviews the tag and category structure on the NDS site."
+code1: 
 image:
-  feature: NEONCarpentryHeader_2.png
-  credit: A collaboration between the National Ecological Observatory Network (NEON) and Data Carpentry
+  feature: remoteSensingBanner.png
+  credit: 
   creditlink: 
-permalink: /R/Introduction-to-Raster-Data-In-R
+permalink: /NDS-documentation/categories-and-tags
 comments: false
 ---
 
 {% include _toc.html %}
 
 ##About
-In this lesson, we will cover the basics of raster data and how to how to open, 
-plot and explore raster data properties in `R`.
+We can organize pages by categories, tags and other YAML elements. Categories and Tags are build
+into the jekyll structure. This creating automated pages can be done as follows:
 
-**R Skill Level:** Intermediate - you've got the basics of `R` down.
+* Add a tag to a page `tags:  [raster, GIS-spatial-data, raster-ts-wrksp]`
+* Edit the tags.yml or categories.yml files located in the `_data` directory. This file is composed of a `YAML` list
+of elements. The `slug` is the name used in the YAML front matter. Eg `raster` and `GIS-spatial-data` are both slugs. The `name` is the "pretty" version of the tag that will be rendered on the left hand side of the page.
 
-<div id="objectives" markdown="1">
+ <code>
+ 
+	#example of tags.yml content
+	
+	- slug: GIS-spatial-data
+	  name: Spatial Data & GIS
+	- slug: HDF5
+	  name: Hierarchical Data Formats (HDF5)
+	- slug: hyperspectral-remote-sensing
+	  name: Hyperspectral Remote Sensing  	  
+	- slug: R
+	  name: R programming
+	- slug: raster
+	  name: Raster Data  
+	- slug: raster-ts-wrksp
+	  name: Raster Time Series Workshop
+	- slug: remote-sensing
+	  name: Remote Sensing
+	- slug: time-series
+	  name: Time Series  
+	  
+</code>
+	  
+* Finally, each slug needs an associated `*.md` file in the `org/tags/` directory. For example `lidar.md`, 
+`time-series.md`, etc. The YAML for each markdown page should include the tag for that particular page, and 
+an appropriate `permalink` which is the direct link to the page.
 
-###Goals / Objectives
+<code>
 
-After completing this activity, you will:
+	---
+	layout: post_by_tag
+	title: 'Articles tagged with LiDAR'
+	tag: lidar
+	permalink: lidar/
+	image:
+	  feature: remoteSensingBanner.png
+	  credit: Colin Williams NEON, Inc.
+	---
 
-* Understand what a raster dataset is and its fundamental attributes.
-* Know how to explore raster attributes in `R`.
-* Be able to import rasters into `R` using the `raster` library.
-* Be able to quickly plot a raster file in `R`.
-* Understand the difference between single- and mult-band rasters.
-
-
-**To complete this lesson:** you will need the most current version of R, and 
-preferably RStudio, loaded on your computer.
-
-####R Libraries to Install:
-
-* **raster:** `install.packages("raster")`
-* **rgdal:** `install.packages("rgdal")`
-
-####Download Data
-
-<a href="https://ndownloader.figshare.com/files/3579867" class="btn btn-success"> Download NEON Airborne Observation Platform Raster Data Teaching Subset</a> 
-
-The LiDAR and imagery data used to create this raster teaching data subset were
-collected over the NEON <a href="http://www.neoninc.org/science-design/field-sites/harvard-forest" target="_blank" >Harvard Forest</a>
-and 
-<a href="http://www.neoninc.org/science-design/field-sites/san-joaquin-experimental-range" target="_blank" >San Joaquin Experimental Range</a>
-field sites and processed at
-<a href="http://www.neoninc.org" target="_blank" >NEON </a> 
-headquarters. The entire dataset can be accessed by request from the 
-<a href="http://www.neoninc.org/data-resources/get-data/airborne-data" target="_blank"> NEON Airborne Data Request Page on the NEON Website.</a>
-
-**Set Working Directory:** This lessons assumes that you have set your working 
-directory to the location of the downloaded and unzipped data subset. [An overview
-of setting the working directory in `R` can be found here.]({{site.baseurl}}/R/Set-Working-Directory "R Working Directory Lesson") 
-lesson prior to beginning this lesson.
-
-**Challenge Code:** NEON Data lesson often contain challenges that reinforce 
-learned skills. If available, the code for challenge solutions is found in a 
-downloadable `R` script available on the footer of each lesson page.
-
-**Raster Lesson Series : ** This lesson is a part of a lesson series on raster 
-data in R <<link here>>
-
-###Additional Resources
-
-* <a href="http://cran.r-project.org/web/packages/raster/raster.pdf" target="_blank">
-Read more about the `raster` package in `R`.</a>
-* <a href="http://neondataskills.org/R/Raster-Data-In-R/" target="_blank" >  NEON Data Skills: Raster Data in R - The Basics</a>
-* <a href="http://neondataskills.org/R/Image-Raster-Data-In-R/" target="_blank" > NEON Data Skills: Image Raster Data in R - An Intro</a>
-
-</div>
-
+</code>
 
