@@ -11,8 +11,8 @@
 <h3>{{ site.owner.name }}</h3>
 <p>{{ site.owner.bio }}</p>
 
-<h3>Data Series</h3>
-
+<h3>Lesson Series</h3>
+<p>A set of lessons that teach a particular theme.</p>
 {% for member in site.data.workshopSeries %}
 {% assign counter = 0 %}
 <!-- this code counts the number of posts associated with the member -->
@@ -21,12 +21,14 @@
 	{% assign counter = counter | plus: 1 %}
 	{% endif %}
 {% endfor %}	
-  <h5><a href="{{ site.baseurl }}/workshop-series/{{ member.slug }}">{{ member.name }} ({{ counter }})</h5>
-  	
-
+  <h5>
+  <a href="{{ site.baseurl }}/workshop-series/{{ member.slug }}">{{ member.name }} ({{ counter }})</a>
+  </h5> 
 {% endfor %}
 
-<h3>Tutorial Tag</h3>
+
+<h3>Tutorial by Tag</h3>
+
 {% for tag in site.tags %}
 {% assign t = tag | first %}
   {% for atag in site.data.tags %}
