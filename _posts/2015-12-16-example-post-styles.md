@@ -191,14 +191,14 @@ Any image with caption & source:
 <figure>
     <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
     <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
-    <figcaption> Caption here. Image Source: National Ecological Observatory Network (NEON)  
+    <figcaption> Caption here. Source: National Ecological Observatory Network (NEON)  
     </figcaption>
 </figure>
 
     <figure>
        <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
        <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
-      <figcaption> Caption here. Image Source: National Ecological Observatory Network (NEON)
+      <figcaption> Caption here. Source: National Ecological Observatory Network (NEON)
        </figcaption>
     </figure>
 
@@ -217,12 +217,12 @@ Render One Image
 
 <figure>
     <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
-    <figcaption>Caption describing the above image, Image Source: source here.</figcaption>
+    <figcaption>Caption describing the above image, Source: source here.</figcaption>
 </figure>
 
 	<figure>
 	    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
-	    <figcaption>Caption describing the above image, Image Source: source here.</figcaption>
+	    <figcaption>Caption describing the above image, Source: source here.</figcaption>
 	</figure>
 
 Two images side by side:
