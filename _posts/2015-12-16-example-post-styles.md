@@ -50,7 +50,7 @@ preferably RStudio, loaded on your computer.
 * **library:** `install.packages("library")`
 * **rgdal:** `install.packages("rgdal")`
 
-[{{ site.baseurl }} R/Packages-In-R/](More on Packages in R - Adapted from Software Carpentry.)
+* [More on Packages in R - Adapted from Software Carpentry.]({{site.baseurl}}R/Packages-In-R/)
 
 ###Download Data
 
