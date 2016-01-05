@@ -1,12 +1,12 @@
 ---
 layout: post_by_r-package
 title: 'Data Tutorials Using the ggplot R Package'
-topic-tag: communication-dissemination
-permalink: topic-tag/communication-dissemination/
+packagesLibraries: ggplot
+permalink: R-package/ggplot/
 image:
   feature: planeBanner.png
   credit: 
   creditlink: 
 ---
 
-This will list all pages with a communication-dissemination theme.
+Self-paced data tutorials that use the `R`, `ggplot` package.

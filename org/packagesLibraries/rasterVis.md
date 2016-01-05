@@ -1,7 +1,7 @@
 ---
 layout: post_by_r-package
 title: 'Data Tutorials Using the rasterVis R Package'
-topic-tag: rasterVis
+packagesLibraries: rasterVis
 permalink: R-package/rasterVis/
 image:
   feature: planeBanner.png
@@ -9,4 +9,5 @@ image:
   creditlink: 
 ---
 
-This will list all pages with a data-analysis theme.
+Data tutorials that use the `R`, `rasterVis` package which supports creating nice plots
+of raster time series data.

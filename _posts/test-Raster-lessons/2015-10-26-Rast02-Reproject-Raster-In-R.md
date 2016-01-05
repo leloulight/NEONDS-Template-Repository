@@ -7,7 +7,7 @@ contributors: [Megan A. Jones]
 packagesLibraries: [raster, rgdal]
 dateCreated:  2015-10-23
 lastModified: 2015-12-30
-category: spatio-temporal-workshop
+categories: [teaching-module]
 tags: [raster-ts-wrksp, raster, GIS-spatial-data]
 mainTag: raster-ts-wrksp
 workshopSeries: [raster-data]
@@ -26,13 +26,5 @@ comments: false
 
 ##About
 
-Sometimes we encounter raster datasets that do not "line up" when plotted or 
-analyzed. Rasters that don't line up are most often in different Coordinate Reference
-Systems (`CRS`).
 
-This lesson explains how to deal with rasters in different, known `CRS`s. It will
-walk though reprojecting rasters in `R` using the `projectRaster` function in
-the `raster` library.
-
-**R Skill Level:** Intermediate - you've got the basics of `R` down.
 

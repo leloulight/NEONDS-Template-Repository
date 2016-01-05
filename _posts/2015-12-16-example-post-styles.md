@@ -191,25 +191,25 @@ Any image with caption & source:
 <figure>
     <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
     <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
-    <figcaption> Caption here. Image Source: NEON,Inc.  
+    <figcaption> Caption here. Image Source: National Ecological Observatory Network (NEON)  
     </figcaption>
 </figure>
 
     <figure>
        <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
        <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
-      <figcaption> Caption here. Image Source: NEON,Inc.  
-      </figcaption>
+      <figcaption> Caption here. Image Source: National Ecological Observatory Network (NEON)
+       </figcaption>
     </figure>
 
 
-replace "{{ site.baseurl }}/images/pnt_line_poly.png"  with the full URL if 
+replace `{ site.baseurl }}/images/pnt_line_poly.png`  with the full URL if 
 image is not in the images folder. 
 
 A rule is below:
 
 ***
-    #create rule
+    #create rule using atlas 3 stars (*)
     ***
 
     
@@ -243,7 +243,6 @@ Trying out a nice light color to make the challenges stand out. It might be nice
   
 Here is some challenge text.
 
-<<<<<<< HEAD
 * it can have bullets
 * another bullet
 
@@ -251,10 +250,7 @@ or
 
 1. a numbered list
 2. or two 
-  
-It can have quotes too!
 
->like this
 * It can have bullets
 * Another bullet
   
@@ -270,42 +266,39 @@ it can have multiple paragraphs, too.
 
 
 
-  <div id="challenge" markdown="1">
-  ##Challenge
+	<div id="challenge" markdown="1">
+	##Challenge
+	  
+	Here is some challenge text.
+
+	* it can have bullets
+	* another bullet
+
+	or 
+
+	1. a numbered list
+	2. or two 
+
+	* It can have bullets
+	* Another bullet
+	  
+	some more text here
+
+	**bolding stuff**
+	*italicize stuff*
+
+	it can have multiple paragraphs, too.
+	</div>
   
-  Here is some challenge text.
-
-  * it can have bullets
-  * another bullet
-
-  or 
-
-  1. a numbered list
-  2. or two 
   
-  It can have quotes too!
+##Challenge Code
+We can include the answers to challenge questions in the .Rmd files. If we set `echo=FALSE`, then the code will render in the `R` script that can be downloaded at the bottom of the page. However, it will not render on th website. If we want to hide the answer output add `, results=hide`.
+ 
+	``` {r challenge-code-name-here, echo=FALSE}
+	# we don't want challenge code to post but do want it to appear 
+	#in the .R script.
 
-  >like this
-
-  >even multiple paragraphs
-  </div>
-  
-  
-``` {r challenge-code-name-here, echo=FALSE}
-# we don't want challenge code to post but do want it to appear in the .R
-# script.
-
-# If you want figures but no code or results to appear
-#  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
-```
-
-
-  ``` {r challenge-code-name-here, echo=FALSE}
-  # we don't want challenge code to post but do want it to appear in the .R
-  # script.
-  
-  # If you want figures but no code or results to appear
-  #  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
-  
-  ```
+	# If you want figures but no code or results to appear
+	#  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
+	```
 

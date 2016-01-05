@@ -1,12 +1,12 @@
 ---
 layout: post_by_r-package
 title: 'Data Tutorials Using the dplyr R Package'
-topic-tag: analysis
-permalink: topic-tag/analysis/
+packagesLibraries: dplyr
+permalink: R-package/dplyr/
 image:
   feature: planeBanner.png
   credit: 
   creditlink: 
 ---
 
-This will list all pages with a data-analysis theme.
+Data tutorials that use the `R`, `dplyr` package.

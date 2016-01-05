@@ -8,7 +8,7 @@ contributors: [Megan A. Jones]
 packagesLibraries: [raster, rgdal]
 dateCreated:  2015-10-23
 lastModified: 2015-12-30
-category: spatio-temporal-workshop
+categories: [science-video]
 tags: [raster-ts-wrksp, raster, GIS-spatial-data]
 mainTag: raster-ts-wrksp
 workshopSeries: [raster-data]
