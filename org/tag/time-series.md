@@ -1,11 +1,11 @@
 ---
 layout: post_by_tag
-title: 'Tutorials by Tag: Time Series Data'
+title: 'Tutorials Tagged with Time Series Data'
 tag: time-series
 permalink: time-series/
 image:
-  feature: planeBanner.png
-  credit: Colin Williams NEON, Inc.
+  feature: codingInformatics.png
+  credit:
   creditlink: 
 ---
 

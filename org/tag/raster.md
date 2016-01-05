@@ -4,7 +4,7 @@ title: 'Tutorials by Tag: Time Series Data'
 tag: raster
 permalink: raster/
 image:
-  feature: NEONCarpentryHeader_2.png
+  feature: lidar_GrandMesa.png
   credit: 
   creditlink: 
 ---
