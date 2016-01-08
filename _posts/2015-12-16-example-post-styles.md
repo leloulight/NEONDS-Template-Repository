@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Title of Post Here - This Is An Example Post"
-description: "This is a sample post to document and explore available styles. Description should be fully in 
-PLAIN TEXT."
+description: "This is a sample post to document and explore available styles. Description should be fully in PLAIN TEXT -- no code text"
 date: 2015-12-18
 dateCreated: 2014-11-18
 lastModified: 2016-01-04
@@ -26,24 +25,32 @@ comments: false
 {% include _toc.html %}
 
 
-	#include table of contents using include file
-    # {  include _toc.html %}
+	Add Table of Contents (Overview) to side bar with include file
+    {%  include _toc.html %}
 
+#Heading one - TITLE
+	#Heading one TITLE  -> typically this is auto produced from yaml header
 
-**R Skill Level:** Intermediate - you’ve got the basics of R down.
+##About
+1-2 sentences describing what the lesson is about
+
+	##About
+	1-2 sentences describing what the lesson is about
+
+**R Skill Level:** Intermediate - you've got the basics of `R` down.
+	**R Skill Level:** Intermediate - you've got the basics of `R` down.
 
 <div id="objectives" markdown="1">
 
 #Goals / Objectives
 After completing this activity, you will:
 
-* Objective 1
-* Be able to extract values from raster that correspond to a vector file overlay.
+* Objective 1.
+* Objective 2.
 
 ##Things You’ll Need To Complete This Lesson
-
 To complete this lesson you will need the most current version of R, and 
-preferably RStudio, loaded on your computer.
+preferably, RStudio loaded on your computer.
 
 ###Install R Packages
 
@@ -55,6 +62,7 @@ preferably RStudio, loaded on your computer.
 ###Download Data
 
 {% include/dataSubsets/_data_Landsat-NDVI.html %}
+
 {% include/dataSubsets/_data_Landsat-NDVI.html %}
 
 	
@@ -83,9 +91,8 @@ data in R <<link here>>
 	* Objective 2 
 
 	##Things You’ll Need To Complete This Lesson
-
 	To complete this lesson you will need the most current version of R, and 
-	preferably RStudio, loaded on your computer.
+	preferably, RStudio loaded on your computer.
 
 	###R Libraries to Install:
 
@@ -97,74 +104,48 @@ data in R <<link here>>
 	###Download Data
 
 	{ include/dataSubsets/_data_Landsat-NDVI.html %}
+
 	{ include/dataSubsets/_data_Landsat-NDVI.html %}
 	
 
 	{ include/_greyBox-wd-rscript.html %}
 	
 	**Raster Lesson Series :** This lesson is a part of a lesson series on raster 
-data in R <<link here>>
+	data in R <<link here>>
 	NOTE: the above text could be an include file that reads YAML elements
+
 	</div>
 
-#Heading one - TITLE
+***
+    create rule (pale grey horizontal line) using atlas 3 stars (*)
+	incidetally 4 stars (****) does the same thing
+    ***
 
-##About
-1-2 sentences describing what the lesson is about
+***
 
-**R Skill Level:** Intermediate - you've got the basics of `R` down.
-
-<div id="objectives" markdown="1">
-##Goals / Objectives
-After completing this activity, you will:
-
- * Be able to XXX.
- 
-##Things You'll Need To Complete This Lesson
-You will need the most current version of `R` and, preferably, RStudio loaded on
-your computer to complete this lesson.
-
-##R Libraries to Install:
-* **packageName:** `install.packages("NAME")`
-
-<a href="{{ site.baseurl }}/R/Packages-In-R/" target="_blank"> 
-More on Packages in R - Adapted from Software Carpentry.</a>
-
-##Data to Download
-Can be a link or an _include file. 
-
-**Set Working Directory:** This lessons assumes that you have set your working 
-directory to the location of the downloaded and unzipped data subset. 
-[An overview of setting the working directory in `R` can be found here.]({{site.baseurl}}/R/Set-Working-Directory "R Working Directory Lesson") 
-
-**Challenge Code:** NEON Data Skills tutorials often contain challenges that
-reinforce learned skills. If available, the code for challenge solutions is
-found in adownloadable `R` script available on the footer of each lesson page.
-
-** Lesson Series: ** This lesson is a part of a lesson series on XXX 
-data in `R`.  (Delete if not applicable)
-</div> 
-
-#Heading one
-Introduction to the page goes here
-
-
+All headers with in lessons are headers 2-4.  
 
 ##Heading two
+	##Heading two
 
 ###Heading three
+	###Heading three 
 
-For a pale grey horizontal line: ***
+####Heading four
+	####Heading four 
+
+
 ***
+
 Code for a data tip:
 
-    <i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. Sometimes it
-    might have some `code` in it
-    {: .notice}
-
-<i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. Sometimes it
-    might have some `code` in it
+<i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. 
+Sometimes it might have some `code` in it.
 {: .notice}
+
+	<i class="fa fa-star"></i> **Data Tip:** Here is a block with a data tip. 
+	Sometimes it might have some `code` in it.
+	{: .notice}
 
 
 ***
@@ -191,55 +172,59 @@ Any image with caption & source:
 <figure>
     <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
     <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
-    <figcaption> Caption here. Image Source: National Ecological Observatory Network (NEON)  
+    <figcaption> Caption here. 
+	Source: National Ecological Observatory Network (NEON)  
     </figcaption>
 </figure>
 
     <figure>
-       <a href="{{ site.baseurl }}/images/pnt_line_poly.png">
-       <img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
-      <figcaption> Caption here. Image Source: National Ecological Observatory Network (NEON)
-       </figcaption>
+    	<a href="{{ site.baseurl }}/images/pnt_line_poly.png">
+    	<img src="{{ site.baseurl }}/images/pnt_line_poly.png"></a>
+    	<figcaption> Caption here. 
+		Source: National Ecological Observatory Network (NEON)  
+    	</figcaption>
     </figure>
 
 
 replace `{ site.baseurl }}/images/pnt_line_poly.png`  with the full URL if 
 image is not in the images folder. 
 
-A rule is below:
 
 ***
-    #create rule using atlas 3 stars (*)
-    ***
-
-    
-Render One Image
-
-<figure>
-    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
-    <figcaption>Caption describing the above image, Image Source: source here.</figcaption>
-</figure>
-
-	<figure>
-	    <a href="/images/600x300.jpg"><img src="/images/600x300.jpg"></a>
-	    <figcaption>Caption describing the above image, Image Source: source here.</figcaption>
-	</figure>
 
 Two images side by side:
 
 <figure class="half">
-    <a href="{{site.baseurl}}/images/600x300.jpg"><img src="{{site.baseurl}}/images/600x300.jpg"></a>
-    <a href="{{site.baseurl}}/images/600x300.jpg"><img src="{{site.baseurl}}/images/600x300.jpg"></a>
-    <figcaption>Caption describing these two images.</figcaption>
+    <a href="{{site.baseurl}}/images/600x300.jpg">
+	<img src="{{site.baseurl}}/images/600x300.jpg">
+	</a>
+    <a href="{{site.baseurl}}/images/600x300.jpg">
+	<img src="{{site.baseurl}}/images/600x300.jpg"></a>
+    <figcaption>Caption describing these two images. Include Source: 
+	</figcaption>
 </figure>
 
-    
-***
+	 <figure class="half">
+   		<a href="{{site.baseurl}}/images/600x300.jpg">
+		<img src="{{site.baseurl}}/images/600x300.jpg">
+		</a>
+   		<a href="{{site.baseurl}}/images/600x300.jpg">
+		<img src="{{site.baseurl}}/images/600x300.jpg">
+		</a>
+    	<figcaption>Caption describing these two images. Source(s): here
+		</figcaption>
+	</figure>    
 
-Trying out a nice light color to make the challenges stand out. It might be nice to also add a small icon for challenges like SWC uses? or not.
+***
+##Challenges
+Trying out a nice light color to make the challenges stand out. 
+It might be nice to also add a small icon for challenges like SWC uses? or not.
+The div tags (<\div>) goes BEFORE the code chunk associated with the challenge. 
+
+All challenges are Header 2 (##)
 
 <div id="challenge" markdown="1">
-##Challenge
+##Challenge: Title of Challenge
   
 Here is some challenge text.
 
@@ -251,19 +236,14 @@ or
 1. a numbered list
 2. or two 
 
-* It can have bullets
-* Another bullet
-  
 some more text here
 
 **bolding stuff**
+
 *italicize stuff*
 
-it can have multiple paragraphs, too.
+It can have multiple paragraphs too.
 </div>
-
-
-
 
 
 	<div id="challenge" markdown="1">
@@ -279,26 +259,31 @@ it can have multiple paragraphs, too.
 	1. a numbered list
 	2. or two 
 
-	* It can have bullets
-	* Another bullet
 	  
 	some more text here
 
 	**bolding stuff**
+
 	*italicize stuff*
 
 	it can have multiple paragraphs, too.
 	</div>
   
   
-##Challenge Code
-We can include the answers to challenge questions in the .Rmd files. If we set `echo=FALSE`, then the code will render in the `R` script that can be downloaded at the bottom of the page. However, it will not render on th website. If we want to hide the answer output add `, results=hide`.
- 
+Challenge Code Chunks
+
+We can include the answers to challenge questions in the .Rmd files. 
+If we set `echo=FALSE`, then the code will render in the `R` script that can be
+downloaded at the bottom of the page. However, it will not render on th website.
+
 	``` {r challenge-code-name-here, echo=FALSE}
 	# we don't want challenge code to post but do want it to appear 
-	#in the .R script.
-
-	# If you want figures but no code or results to appear
-	#  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
+	# in the .R script.
 	```
 
+If we want to hide the answer output add `results=hide` but if we want to
+keep the figures and allow them to show use `include=TRUE`.
+
+	```  {r challenge-code-name, include=TRUE, results="hide", echo=FALSE}
+	# If you want figures but no code or results to appear.
+	```
