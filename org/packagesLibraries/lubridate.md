@@ -1,10 +1,10 @@
 ---
 layout: post_by_r-package
 title: 'Data Tutorials Using the lubridate R Package'
-packagesLibraries: dplyr
+packagesLibraries: lubridate
 permalink: R-package/lubridate/
 image:
-  feature: planeBanner.png
+  feature: RBanner.png
   credit: 
   creditlink: 
 ---
